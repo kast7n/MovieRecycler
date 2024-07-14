@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMovieAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvMovieGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvMovieDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/ivMovieImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Recipe Image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="57dp"
+            android:layout_height="33dp"
+            android:backgroundTint="#E91E63"
+            app:icon="@android:drawable/ic_delete" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="57dp"
+            android:layout_height="33dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            app:icon="@android:drawable/ic_menu_edit" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="57dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1EA2E9"
+            app:icon="@android:drawable/ic_menu_share" />
+
+        <Button
+            android:id="@+id/btnYoutube"
+            android:layout_width="57dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:backgroundTint="#4A1EE9"
+            app:icon="@android:drawable/presence_video_online" />
+    </LinearLayout>
+
+</LinearLayout>
