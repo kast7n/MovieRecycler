@@ -3,15 +3,30 @@ package com.example.movierecycler;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MovieDetailActivity extends AppCompatActivity {
     private TextView tvTitle, tvAuthor, tvGenre,tvDuration;
     private ImageView ivImage;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home){
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +39,15 @@ public class MovieDetailActivity extends AppCompatActivity {
         tvDuration = findViewById(R.id.tvMovieDuration);
         ivImage = findViewById(R.id.ivMovieImage);
         Button btnShare = findViewById(R.id.btnShare);
+        androidx.appcompat.widget.Toolbar tbDetails = findViewById(R.id.toolbarDetails);
+
+        setSupportActionBar(tbDetails);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+
+
 
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
